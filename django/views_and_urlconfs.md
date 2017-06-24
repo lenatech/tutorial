@@ -88,13 +88,13 @@ url(r'^hello/$', hello_world),
 ```python
 # mysite/urls.py
 
-from django.conf.urls import include, url
+from django.conf.urls import url
 from django.contrib import admin
 # Import view functions from trips app.
 from trips.views import hello_world
 
 urlpatterns = [
-    url(r'^admin/', include(admin.site.urls)),
+    url(r'^admin/', admin.site.urls),
     url(r'^hello/$', hello_world),
 ]
 ```
